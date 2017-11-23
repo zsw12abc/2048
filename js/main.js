@@ -9,7 +9,8 @@ function newGame() {
     //init the grid container
     init();
     //add two random numbers in random cell
-
+    generateOneNumber();
+    generateOneNumber();
 }
 
 function init() {
@@ -55,4 +56,28 @@ function updateBoardView() {
             }
         }
     }
+}
+
+function generateOneNumber() {
+    if (noSpace(board)) {
+        return false;
+    }
+
+    var randX = parseInt(Math.floor(Math.random() * 4));
+    var randY = parseInt(Math.floor(Math.random() * 4));
+
+    while (true) {
+        if (board[randX][randY] === 0) {
+            break;
+        }
+        randX = parseInt(Math.floor(Math.random() * 4));
+        randY = parseInt(Math.floor(Math.random() * 4));
+    }
+
+    var randNumber = Math.random() < 0.5 ? 2 : 4;
+    board[randX][randY] = randNumber;
+
+    showNumberWithAnimation(randX, randY, randNumber);
+
+    return true;
 }
