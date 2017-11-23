@@ -35,7 +35,7 @@ function updateBoardView() {
     $('.number-cell').remove();
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
-            var numberCellDiv = $("div").className("number-cell").attr("id", "number-cell-" + i + "-" + j);
+            var numberCellDiv = $("<div>").addClass("number-cell").attr("id", "number-cell-" + i + "-" + j);
             $('#grid-container').append(numberCellDiv);
             var numberOfCell = $("#number-cell-" + i + "-" + j);
 
