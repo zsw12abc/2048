@@ -16,6 +16,8 @@ function newGame() {
 function init() {
     score = 0;
     updateScore();
+    keyboardListener(true);
+    // console.log("start key listening");
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
             var gridCell = $("#grid-cell-" + i + "-" + j);
@@ -84,42 +86,47 @@ function generateOneNumber() {
     return true;
 }
 
-$(document).keydown(function (event) {
-    event.preventDefault();//for prevent default key function
-    switch (event.keyCode) {
-        case 37://left
-            if (moveLeft()) {
-                setTimeout("generateOneNumber()", 200);
-                setTimeout("isGameOver()", 300);
+function keyboardListener(start) {
+    if (start) {
+        $(document).keydown(function (event) {
+            event.preventDefault();//for prevent default key function
+            switch (event.keyCode) {
+                case 37://left
+                    if (moveLeft()) {
+                        setTimeout("generateOneNumber()", 200);
+                        setTimeout("isGameOver()", 300);
+                    }
+                    break;
+                case 38://up
+                    if (moveUp()) {
+                        setTimeout("generateOneNumber()", 200);
+                        setTimeout("isGameOver()", 300);
+                    }
+                    break;
+                case 39://right
+                    if (moveRight()) {
+                        setTimeout("generateOneNumber()", 200);
+                        setTimeout("isGameOver()", 300);
+                    }
+                    break;
+                case 40://down
+                    if (moveDown()) {
+                        setTimeout("generateOneNumber()", 200);
+                        setTimeout("isGameOver()", 300);
+                    }
+                    break;
+                default:
+                    break;
             }
-            break;
-        case 38://up
-            if (moveUp()) {
-                setTimeout("generateOneNumber()", 200);
-                setTimeout("isGameOver()", 300);
-            }
-            break;
-        case 39://right
-            if (moveRight()) {
-                setTimeout("generateOneNumber()", 200);
-                setTimeout("isGameOver()", 300);
-            }
-            break;
-        case 40://down
-            if (moveDown()) {
-                setTimeout("generateOneNumber()", 200);
-                setTimeout("isGameOver()", 300);
-            }
-            break;
-        default:
-            break;
+        });
     }
-});
-
+}
 
 function isGameOver() {
     if (noSpace(board) && noMove(board)) {
         // alert("Game Over!");
+        keyboardListener(false);
+        // console.log("stop key listening");
         swal({
             type: 'error',
             html: "<h1>Game Over</h1>" + "<h2>Your Final Score is " + score + ".</h2>",
@@ -127,8 +134,11 @@ function isGameOver() {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Try Again'
-        }).then(
-            newGame()
+        }).then(function (result) {
+                if (result.value) {
+                    newGame();
+                }
+            }
         );
     }
 }
