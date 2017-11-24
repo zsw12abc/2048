@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0170b804-4f70-4125-baa1-20a650a76fbe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/animation.js" afterPath="$PROJECT_DIR$/js/animation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/responsive.js" afterPath="$PROJECT_DIR$/js/responsive.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -222,7 +218,7 @@
       <updated>1511410401163</updated>
       <workItem from="1511410403778" duration="5623000" />
       <workItem from="1511482500666" duration="8350000" />
-      <workItem from="1511495786576" duration="9193000" />
+      <workItem from="1511495786576" duration="9256000" />
     </task>
     <task id="LOCAL-00001" summary="add grid div">
       <created>1511411669778</created>
@@ -364,11 +360,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511507169254</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add responsive v1.2&#10;add stand unit">
+      <created>1511508663793</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1511508663793</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23166000" />
+    <option name="totallyTimeSpent" value="23229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -419,7 +422,8 @@
     <MESSAGE value="add init responsive" />
     <MESSAGE value="add responsive v1.0" />
     <MESSAGE value="add responsive v1.1 &#10;fix the class and id error" />
-    <option name="LAST_COMMIT_MESSAGE" value="add responsive v1.1 &#10;fix the class and id error" />
+    <MESSAGE value="add responsive v1.2&#10;add stand unit" />
+    <option name="LAST_COMMIT_MESSAGE" value="add responsive v1.2&#10;add stand unit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
