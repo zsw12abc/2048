@@ -88,25 +88,25 @@ $(document).keydown(function (event) {
         case 37://left
             if (moveLeft()) {
                 setTimeout("generateOneNumber()", 200);
-                isGameOver();
+                setTimeout("isGameOver()",300);
             }
             break;
         case 38://up
             if (moveUp()) {
                 setTimeout("generateOneNumber()", 200);
-                isGameOver();
+                setTimeout("isGameOver()",300);
             }
             break;
         case 39://right
             if (moveRight()) {
                 setTimeout("generateOneNumber()", 200);
-                isGameOver();
+                setTimeout("isGameOver()",300);
             }
             break;
         case 40://down
             if (moveDown()) {
                 setTimeout("generateOneNumber()", 200);
-                isGameOver();
+                setTimeout("isGameOver()",300);
             }
             break;
         default:
@@ -116,15 +116,11 @@ $(document).keydown(function (event) {
 
 
 function isGameOver() {
-    for (var i = 0; i < 4; i++) {
-        for (var j = 0; j < 4; j++) {
-            if (board[i][j] === 0) {
-                return false;
-            }
-        }
+    if (noSpace(board) && noMove(board)) {
+        alert("Game Over!");
     }
-    return true;
 }
+
 
 function moveLeft() {
     if (!canMoveLeft(board)) {
