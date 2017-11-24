@@ -1,9 +1,9 @@
 function getPosTop(i, j) {
-    return 20 + i * 120;
+    return screen.height/100 *2.5 + i * screen.height/100*15;
 }
 
 function getPosLeft(i, j) {
-    return 20 + j * 120;
+    return screen.height/100*2.5 + j * screen.height/100*15;
 }
 
 function getNumberBackgroundColor(number) {
