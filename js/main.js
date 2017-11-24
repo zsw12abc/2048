@@ -51,11 +51,11 @@ function updateBoardView() {
             if (board[i][j] === 0) {
                 numberOfCell.css("width", "0px");
                 numberOfCell.css("height", "0px");
-                numberOfCell.css("top", getPosTop(i, j) + standL / 460 * 50);
-                numberOfCell.css("left", getPosLeft(i, j) + standL / 460 * 50);
+                numberOfCell.css("top", getPosTop(i, j) + standUnit * 50);
+                numberOfCell.css("left", getPosLeft(i, j) + standUnit * 50);
             } else {
-                numberOfCell.css("width", standL / 460 * 100);
-                numberOfCell.css("height", standL / 460 * 100);
+                numberOfCell.css("width", standUnit * 100);
+                numberOfCell.css("height", standUnit * 100);
                 numberOfCell.css("top", getPosTop(i, j));
                 numberOfCell.css("left", getPosLeft(i, j));
                 numberOfCell.css("background-color", getNumberBackgroundColor(board[i][j]));
