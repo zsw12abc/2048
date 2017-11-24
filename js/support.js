@@ -1,9 +1,9 @@
 function getPosTop(i, j) {
-    return standL / 40 + i * standL / 4;
+    return standL / 460 * 20 + i * standL / 460 * 120;
 }
 
 function getPosLeft(i, j) {
-    return standL / 40 + j * standL / 4;
+    return standL / 460 * 20 + j * standL / 460 * 120;
 }
 
 function getNumberBackgroundColor(number) {

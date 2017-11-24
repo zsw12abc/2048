@@ -14,7 +14,7 @@ header h1 {
 
 header #newGameButton {
     display: block;
-    margin: 20px auto;
+    margin: auto;
     /*margin: auto;*/
 
     width: 100px;
