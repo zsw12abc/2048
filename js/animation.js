@@ -12,3 +12,11 @@ function showNumberWithAnimation(i, j, num) {
         left: getPosLeft(i, j)
     }, 50);
 }
+
+function showMoveAnimation(fromX, fromY, toX, toY) {
+    var numberOfCell = $("#number-cell-" + fromX + "-" + fromY);
+    numberOfCell.animate({
+        top: getPosTop(toX, toY),
+        left: getPosLeft(toX, toY)
+    }, 200);
+}

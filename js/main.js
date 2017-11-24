@@ -81,3 +81,71 @@ function generateOneNumber() {
 
     return true;
 }
+
+$(document).keydown(function (event) {
+    event.preventDefault();//for prevent default key function
+    switch (event.keyCode) {
+        case 37://left
+            if (moveLeft()) {
+                generateOneNumber();
+                isGameOver();
+            }
+            break;
+        case 38://up
+            if (moveUp()) {
+                generateOneNumber();
+                isGameOver();
+            }
+            break;
+        case 39://right
+            if (moveRight()) {
+                generateOneNumber();
+                isGameOver();
+            }
+            break;
+        case 40://down
+            if (moveDown()) {
+                generateOneNumber();
+                isGameOver();
+            }
+            break;
+        default:
+            break;
+    }
+});
+
+
+function isGameOver() {
+
+}
+
+function moveLeft() {
+    if (!canMoveLeft(board)) {
+        return false;
+    }
+
+    for (var i = 0; i < 4; i++) {
+        for (var j = 1; j < 4; j++) {
+            if (board[i][j] !== 0) {
+                for (var k = 0; k < j; k++) {
+                    if (board[i][k] === 0 && noBlockHorizontal(i, k, j, board)) {
+                        //move
+                        showMoveAnimation(i, j, i, k);
+                        board[i][k] = board[i][j];
+                        board[i][j] = 0;
+                        continue;
+                    } else if (board[i][k] === board[i][j] && noBlockHorizontal(i, k, j, board)) {
+                        //move
+                        showMoveAnimation(i, j, i, k);
+                        //add
+                        board[i][k] += board[i][j];
+                        board[i][j] = 0;
+                        continue;
+                    }
+                }
+            }
+        }
+    }
+    setTimeout("updateBoardView()", 200);//wait for move animation finished.
+    return true;
+}
