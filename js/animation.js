@@ -21,6 +21,14 @@ function showMoveAnimation(fromX, fromY, toX, toY) {
     }, 200);
 }
 
-function updateScore(score) {
-    $("#score").text(score);
+function updateScore(s, increase) {
+    if (increase === 0) {
+        score = 0;
+        oldScore = 0;
+        $("#score").animateNumber({number: score});
+    } else {
+        score = s + increase;
+        $("#score").prop('number', s).animateNumber({number: score}, 200);
+        oldScore = score;
+    }
 }

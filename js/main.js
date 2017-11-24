@@ -1,5 +1,6 @@
 var board = new Array();
 var score = 0;
+var oldScore = 0;
 var hasConflicted = new Array();//prevent multi conflicted when the moving happened
 
 $(document).ready(function () {
@@ -15,8 +16,7 @@ function newGame() {
 }
 
 function init() {
-    score = 0;
-    updateScore(score);
+    updateScore(0, 0);
     // console.log("score updated");
     keyboardListener(true);
     // console.log("start key listening");
@@ -184,9 +184,9 @@ function moveLeft() {
                         board[i][k] += board[i][j];
                         board[i][j] = 0;
                         //add score
-                        score += board[i][k];
+                        // score += board[i][k];
                         hasConflicted[i][k] = true;
-                        updateScore(score);
+                        updateScore(oldScore, board[i][k]);
                     }
                 }
             }
@@ -216,9 +216,9 @@ function moveRight() {
                         //add
                         board[i][k] += board[i][j];
                         board[i][j] = 0;
-                        score += board[i][k]
+                        // score += board[i][k]
                         hasConflicted[i][k] = true;
-                        updateScore(score);
+                        updateScore(oldScore, board[i][k]);
                     }
                 }
             }
@@ -248,9 +248,9 @@ function moveUp() {
                         //add
                         board[k][j] += board[i][j];
                         board[i][j] = 0;
-                        score += board[k][j];
+                        // score += board[k][j];
                         hasConflicted[k][j] = true;
-                        updateScore(score);
+                        updateScore(oldScore, board[k][j]);
                     }
                 }
             }
@@ -280,9 +280,9 @@ function moveDown() {
                         //add
                         board[k][j] += board[i][j];
                         board[i][j] = 0;
-                        score += board[k][j];
+                        // score += board[k][j];
                         hasConflicted[k][j] = true;
-                        updateScore(score);
+                        updateScore(oldScore, board[k][j]);
                     }
                 }
             }
