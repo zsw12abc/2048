@@ -75,13 +75,27 @@ function generateOneNumber() {
     var randX = parseInt(Math.floor(Math.random() * 4));
     var randY = parseInt(Math.floor(Math.random() * 4));
 
-    while (true) {
+    var times = 0;
+    while (times < 50) {
         if (board[randX][randY] === 0) {
             break;
         }
         randX = parseInt(Math.floor(Math.random() * 4));
         randY = parseInt(Math.floor(Math.random() * 4));
+        times++;
     }
+
+    if (times === 50) {
+        for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+                if (board[i][j] === 0) {
+                    randX = i;
+                    randY = j;
+                }
+            }
+        }
+    }
+
 
     var randNumber = Math.random() < 0.5 ? 2 : 4;
     board[randX][randY] = randNumber;
