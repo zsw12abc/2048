@@ -15,7 +15,8 @@ function newGame() {
 
 function init() {
     score = 0;
-    updateScore();
+    updateScore(score);
+    // console.log("score updated");
     keyboardListener(true);
     // console.log("start key listening");
     for (var i = 0; i < 4; i++) {
