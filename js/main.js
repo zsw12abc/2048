@@ -15,6 +15,7 @@ function newGame() {
 
 function init() {
     score = 0;
+    updateScore();
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
             var gridCell = $("#grid-cell-" + i + "-" + j);
@@ -118,7 +119,17 @@ $(document).keydown(function (event) {
 
 function isGameOver() {
     if (noSpace(board) && noMove(board)) {
-        alert("Game Over!");
+        // alert("Game Over!");
+        swal({
+            type: 'error',
+            html: "<h1>Game Over</h1>" + "<h2>Your Final Score is " + score + ".</h2>",
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Try Again'
+        }).then(
+            newGame()
+        );
     }
 }
 
