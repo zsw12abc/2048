@@ -142,6 +142,7 @@ function keyboardListener(start) {
     }
 }
 
+//touch event listener
 document.addEventListener("touchstart", function (event) {
     startX = event.touches[0].pageX;
     startY = event.touches[0].pageY;
@@ -149,6 +150,30 @@ document.addEventListener("touchstart", function (event) {
 document.addEventListener("touchend", function (event) {
     endX = event.changedTouches[0].pageX;
     endY = event.changedTouches[0].pageY;
+    var deltaX = endX - startX;
+    var deltaY = endY - startY;
+
+    if (Math.abs(deltaX) >= Math.abs(deltaY)) {
+        if (deltaX > 0) {//right move
+            moveRight();
+            setTimeout("generateOneNumber()", 200);
+            setTimeout("isGameOver()", 300);
+        } else {//left move
+            moveLeft();
+            setTimeout("generateOneNumber()", 200);
+            setTimeout("isGameOver()", 300);
+        }
+    } else {
+        if (deltaY > 0) {//move down
+            moveDown();
+            setTimeout("generateOneNumber()", 200);
+            setTimeout("isGameOver()", 300);
+        } else {//move up
+            moveUp();
+            setTimeout("generateOneNumber()", 200);
+            setTimeout("isGameOver()", 300);
+        }
+    }
 });
 
 function isGameOver() {
