@@ -109,28 +109,31 @@ function generateOneNumber() {
 function keyboardListener(start) {
     if (start) {
         $(document).keydown(function (event) {
-            event.preventDefault();//for prevent default key function
             switch (event.keyCode) {
                 case 37://left
                     if (moveLeft()) {
+                        event.preventDefault();//for prevent default key function
                         setTimeout("generateOneNumber()", 200);
                         setTimeout("isGameOver()", 300);
                     }
                     break;
                 case 38://up
                     if (moveUp()) {
+                        event.preventDefault();//for prevent default key function
                         setTimeout("generateOneNumber()", 200);
                         setTimeout("isGameOver()", 300);
                     }
                     break;
                 case 39://right
                     if (moveRight()) {
+                        event.preventDefault();//for prevent default key function
                         setTimeout("generateOneNumber()", 200);
                         setTimeout("isGameOver()", 300);
                     }
                     break;
                 case 40://down
                     if (moveDown()) {
+                        event.preventDefault();//for prevent default key function
                         setTimeout("generateOneNumber()", 200);
                         setTimeout("isGameOver()", 300);
                     }
@@ -153,6 +156,9 @@ document.addEventListener("touchend", function (event) {
     var deltaX = endX - startX;
     var deltaY = endY - startY;
 
+    if (Math.abs(deltaX) < 0.3 * cWidth && Math.abs(deltaY) < 0.3 * cHeight) {
+        return
+    }
     if (Math.abs(deltaX) >= Math.abs(deltaY)) {
         if (deltaX > 0) {//right move
             moveRight();
@@ -174,6 +180,7 @@ document.addEventListener("touchend", function (event) {
             setTimeout("isGameOver()", 300);
         }
     }
+
 });
 
 function isGameOver() {

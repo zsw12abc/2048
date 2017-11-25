@@ -40,8 +40,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="153" column="23" lean-forward="false" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="135" column="81" lean-forward="false" selection-start-line="135" selection-start-column="81" selection-end-line="135" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -96,6 +96,7 @@
       <find>css</find>
       <find>100px</find>
       <find>game</find>
+      <find>preventde</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,7 +206,7 @@
       <workItem from="1511410403778" duration="5623000" />
       <workItem from="1511482500666" duration="8350000" />
       <workItem from="1511495786576" duration="9591000" />
-      <workItem from="1511576589450" duration="1173000" />
+      <workItem from="1511576589450" duration="1672000" />
     </task>
     <task id="LOCAL-00001" summary="add grid div">
       <created>1511411669778</created>
@@ -375,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511579193038</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add touch logic function">
+      <created>1511579607234</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1511579607234</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24737000" />
+    <option name="totallyTimeSpent" value="25236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="812" extended-state="0" />
@@ -433,7 +441,8 @@
     <MESSAGE value="add responsive v1.2&#10;add stand unit" />
     <MESSAGE value="add responsive v1.2&#10;add stand unit for every documents" />
     <MESSAGE value="add touch event" />
-    <option name="LAST_COMMIT_MESSAGE" value="add touch event" />
+    <MESSAGE value="add touch logic function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add touch logic function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -568,14 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/responsive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/support.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -608,10 +609,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/responsive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="153" column="23" lean-forward="false" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="135" column="81" lean-forward="false" selection-start-line="135" selection-start-column="81" selection-end-line="135" selection-end-column="81" />
           <folding />
         </state>
       </provider>
