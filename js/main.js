@@ -2,6 +2,7 @@ var board = new Array();
 var score = 0;
 var oldScore = 0;
 var hasConflicted = new Array();//prevent multi conflicted when the moving happened
+var startX, startY, endX, endY;
 
 $(document).ready(function () {
     newGame();
@@ -140,6 +141,15 @@ function keyboardListener(start) {
         });
     }
 }
+
+document.addEventListener("touchstart", function (event) {
+    startX = event.touches[0].pageX;
+    startY = event.touches[0].pageY;
+});
+document.addEventListener("touchend", function (event) {
+    endX = event.changedTouches[0].pageX;
+    endY = event.changedTouches[0].pageY;
+});
 
 function isGameOver() {
     if (noSpace(board) && noMove(board)) {
