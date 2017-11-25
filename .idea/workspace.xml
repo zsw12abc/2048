@@ -41,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="376">
-              <caret line="159" column="32" lean-forward="false" selection-start-line="159" selection-start-column="32" selection-end-line="159" selection-end-column="32" />
+              <caret line="159" column="31" lean-forward="false" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -206,7 +206,7 @@
       <workItem from="1511410403778" duration="5623000" />
       <workItem from="1511482500666" duration="8350000" />
       <workItem from="1511495786576" duration="9591000" />
-      <workItem from="1511576589450" duration="1761000" />
+      <workItem from="1511576589450" duration="1776000" />
     </task>
     <task id="LOCAL-00001" summary="add grid div">
       <created>1511411669778</created>
@@ -390,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511580122751</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix touch error prevent moving">
+      <created>1511580214196</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1511580214196</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25325000" />
+    <option name="totallyTimeSpent" value="25340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="812" extended-state="0" />
@@ -450,7 +457,8 @@
     <MESSAGE value="add touch event" />
     <MESSAGE value="add touch logic function" />
     <MESSAGE value="fix touch error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix touch error" />
+    <MESSAGE value="fix touch error prevent moving" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix touch error prevent moving" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -628,7 +636,7 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
-          <caret line="159" column="32" lean-forward="false" selection-start-line="159" selection-start-column="32" selection-end-line="159" selection-end-column="32" />
+          <caret line="159" column="31" lean-forward="false" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
           <folding />
         </state>
       </provider>
