@@ -150,11 +150,14 @@ document.addEventListener("touchstart", function (event) {
     startX = event.touches[0].pageX;
     startY = event.touches[0].pageY;
 });
+document.addEventListener("touchmove", function (event) {
+    event.preventDefault();//for prevent default key function
+});
 document.addEventListener("touchend", function (event) {
     endX = event.changedTouches[0].pageX;
     endY = event.changedTouches[0].pageY;
     var deltaX = endX - startX;
-    var deltaY = endY - startY;
+    var deltaY = endY - startY;``
 
     if (Math.abs(deltaX) < 0.3 * cWidth && Math.abs(deltaY) < 0.3 * cHeight) {
         return
